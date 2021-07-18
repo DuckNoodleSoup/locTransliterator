@@ -66,6 +66,7 @@ cyrillic_to_roman = {'А': 'A', # Cyrillic Upper Case to Roman Upper Case
                      'ш': 'sh',
                      'щ': 'shch',
                      'ъ': '"',
+                     'ы': 'y',
                      'ь': "'",
                      'ѣ': 'ie',
                      'э': 'e',
@@ -80,9 +81,9 @@ def convert(title):
     for i, v in enumerate(title):
         try:
             c = cyrillic_to_roman[v]
-            converted_title = converted_title + str(c)
         except KeyError:
-            converted_title = converted_title + str(v)
+            c = str(v)
+        converted_title = converted_title + c
     # final conversion printed
     print(converted_title)
 
