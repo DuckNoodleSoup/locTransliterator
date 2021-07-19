@@ -89,8 +89,16 @@ def convert(title):
 
 
 def main():
-    args = sys.argv[1:]
-    convert(args[0])
+    title = ""
+    while title != "exit":
+        print("====================")
+        print("Russian title:")
+        title = str(input())
+        print("--------------------")
+        print("LOC Transliteration:")
+        convert(title)
+        print("====================")
+        print("")
 
 if __name__ == "__main__":
     main()
